@@ -60,6 +60,7 @@ setInterval(setDate, 1000)
 function noVisibleClock() {
     classicClock.classList.toggle("display-clock");
     flapClock.classList.toggle("display-clock");
+
 }
 
 clockChanger.addEventListener('click', noVisibleClock);
