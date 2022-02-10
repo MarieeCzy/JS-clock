@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: rgb(65, 105, 225, 0.8);
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    text-align: center;
+
+}
+
+body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+
+    font-size: 2rem;
+}
+
+.clock {
+    position: relative;
+
+    width: 4rem;
+    height: 4rem;
+    padding: 2rem;
+    border: 3px solid white;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0px 4px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 2px black,
+        0 0 10px rgba(0, 0, 0, 0.2);
+
+    transition: all 0.8s;
+
+    transform-style: preserve-3d;
+
+}
+
+.clock-face {
+    position: relative;
+    right: calc((var(--clock-face-size) - 100%)/2);
+    bottom: calc((var(--clock-face-size) - 100%)/2);
+    margin-top: 2%;
+
+    z-index: -1;
+
+    width: var(--clock-face-size);
+    height: var(--clock-face-size);
+
+    background: url(./clock-face_img.png);
+    background-size: 115%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: translateY(-1px);
+
+}
+
+.hand {
+    position: absolute;
+    top: 50%;
+
+    height: 2px;
+    width: 50%;
+
+    background-color: black;
+
+    transform: rotate(90deg);
+    transform-origin: 100%;
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.fill {
+    position: absolute;
+    z-index: 10;
+
+    height: 100%;
+
+    background-color: white;
+
+}
+
+:root {
+    --second-fill: 15%;
+    --minute-fill: 25%;
+    --hour-fill: 35%;
+
+    --clock-face-size: 200%;
+}
+
+.second-hand>.fill {
+    width: var(--second-fill);
+}
+
+.min-hand>.fill {
+    width: var(--minute-fill);
+}
+
+.hour-hand>.fill {
+    width: var(--hour-fill);
+}
+
+.change-clock-type {
+    position: absolute;
+
+    height: 5%;
+    bottom: 10%;
+    padding: 2px;
+
+    box-sizing: content-box;
+
+    font-size: .3rem;
+}
+
+
+.display-clock {
+    opacity: 0;
+    transition: .9s;
+}
+
+.flap-clock {
+    position: absolute;
+}
+
+.flap-clock-face {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: hsla(0, 0%, 50%, 0.8);
+    border: 4px solid black;
+
+    box-sizing: content-box;
+
+}
+
+
+
+.flap {
+    margin: 4px 4px;
+
+    border: 2px solid white;
+}
