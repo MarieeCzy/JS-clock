@@ -62,7 +62,7 @@ body {
     width: var(--clock-face-size);
     height: var(--clock-face-size);
 
-    background: url(./clock-face_img.png);
+    background: url(./Screenshots/clock-face_img.png);
     background-size: 115%;
     background-position: center;
     background-repeat: no-repeat;
@@ -182,7 +182,7 @@ body {
 
     background-color: hsla(0, 0%, 50%, 0.7);
     border: 3px solid;
-    border-color: color: rgba(255, 255, 255, 0.01);
+    border-color: color rgba(255, 255, 255, 0.01);
 
     box-sizing: content-box;
 
