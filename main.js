@@ -7,6 +7,7 @@ const flapSec = document.querySelector('.flap-sec')
 const flapMin = document.querySelector('.flap-min')
 const flapHour = document.querySelector('.flap-hour')
 const flapClock = document.querySelector('.flap-clock')
+const clockSign = document.querySelector('.sign');
 
 
 const clockChanger = document.querySelector('.change-clock-type')
@@ -56,10 +57,10 @@ setInterval(setDate, 1000)
 
 
 
-
 function noVisibleClock() {
     classicClock.classList.toggle("display-clock");
     flapClock.classList.toggle("display-clock");
+
 
 }
 
